@@ -1,5 +1,7 @@
 # AI DevOps & Incident Response Assistant
 
+![AI Service CI](https://github.com/myen015/ai-devops-assistant/actions/workflows/ci.yml/badge.svg)
+
 A production-ready, local-first Applied AI microservice combining **Structured Log Analysis**, **Hybrid RAG with Cross-Encoder Reranking**, **Automated AI Evaluations**, **Stateful & Multi-Agent Orchestration**, and an **MCP 2.x Server** — powered by FastAPI, Qdrant, LiteLLM, and Ollama (`qwen2.5:3b`).
 
 ## Architecture Overview
@@ -80,7 +82,7 @@ export API_KEY="your-secret-key"
 
 uvicorn api:app --reload
 ```
-Open Swagger UI at `[http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)`.
+Open Swagger UI at `http://127.0.0.1:8000/docs`.
 
 ### Docker Compose
 Runs the FastAPI container connected directly to the host's Ollama instance (preserves Apple Silicon / host GPU acceleration):
@@ -106,3 +108,4 @@ python eval_rag.py
 ```bash
 python mcp_server.py
 ```
+
